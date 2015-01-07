@@ -3,11 +3,15 @@
 var rick = require('rick-cli');
 
 module.exports = function(grunt) {
-  grunt.registerTask('rick', 'You\'re not pushing to master on red, are you?', function() {
-    var options = grunt.config.data.rick;
-    var url = options.url;
-    var job = options.job;
-
-    rick(url, job, this.async());
-  });
+  grunt.registerMultiTask(
+    'rick', 
+    'You\'re not pushing to master on red, are you?',
+    function() {
+      var data = this.data;
+      var url = data.url;
+      var job = data.job;
+      
+      rick(url, job, this.async());
+    }
+  );
 };

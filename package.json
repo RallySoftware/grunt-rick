@@ -4,18 +4,21 @@
   "description": "a grunt plugin enabling Rick, the build enforcer",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mikeholm/grunt-rick"
+    "url": "https://github.com/RallySoftware/grunt-rick"
   },
-  "author": "mikeholm",
+  "author": "RallySoftware",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mikeholm/grunt-rick/issues"
+    "url": "https://github.com/RallySoftware/grunt-rick/issues"
   },
-  "homepage": "https://github.com/mikeholm/grunt-rick",
-  "devDependencies": {
-    "grunt": "^0.4.5"
-  },
+  "homepage": "https://github.com/RallySoftware/grunt-rick",
   "dependencies": {
-    "rick-cli": "file:/Users/mholm/projects/rick"
+    "rick-cli": "0.0.3"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.11"
+  },
+  "scripts": {
+    "test": "jshint tasks"
   }
 }
