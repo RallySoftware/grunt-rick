@@ -5,19 +5,23 @@ a grunt plugin enabling [Rick](https://github.com/RallySoftware/rick), the build
 
 ## Config
 
-Rick can be configured, in your Gruntfile, to look at a single job on any [Jenkins](http://jenkins-ci.org/) server.
+Rick can be configured, in your Gruntfile, to look at any job on any [Jenkins](http://jenkins-ci.org/) server.
 
 ```js
-module.exports = function(grunt) {
-  grunt.initConfig({
-    rick: {
-      url: '<yourJenkinsUrl>',
-      job: '<yourJobName>'
+grunt.initConfig({
+  rick: {
+    myFirstJob: {
+      url: 'jenkins.myorg.com',
+      job: 'myFirstJob'
+    },
+    mySecondJob: {
+      url: 'jenkins.myorg.com',
+      job: 'mySecondJob'
     }
-  });
+  }
+});
 
-  grunt.loadNpmTasks('grunt-rick');
-};
+grunt.loadNpmTasks('grunt-rick');
 ```
 
 ### url - required
@@ -45,7 +49,5 @@ $ grunt rick
 Or attach the `rick` task to another one of the tasks in your Gruntfile.
 
 ```js
-module.exports = function(grunt) {
-  grunt.registerTask('default', 'rick');
-};
+grunt.registerTask('default', ['jshint', 'rick']);
 ```
