@@ -1,7 +1,7 @@
 grunt-rick
 ==========
 
-a grunt plugin enabling [Rick](https://github.com/mikeholm/rick), the build enforcer
+a grunt plugin enabling [Rick](https://github.com/RallySoftware/rick), the build enforcer
 
 ## Config
 
