@@ -12,11 +12,14 @@ url="$2"
 IFS=' '
 while read local_ref local_sha remote_ref remote_sha
 do
-    if [[ $remote_ref == "refs/heads/master" && \ # only protect the branch Jenkins monitors
-          $url == *github.com:yourAwesomeRepo.git && \ # don't care about forked repos
+    # only protect the branch Jenkins monitors
+    # don't care about forked repos
+    # only if grunt-rick is installed
+    if [[ $remote_ref == "refs/heads/master" && \
+          $url == *github.com:yourAwesomeRepo.git && \
           $(grunt --help | grep rick &> /dev/null && echo found) == "found" ]]
     then
-        echo "I see you're attempting to push to master. I'll check almci for you."
+        echo "I see you're attempting to push to master. I'll check Jenkins for you."
         grunt rick && rc=$?
         if [[ $rc != 0 ]]
         then
