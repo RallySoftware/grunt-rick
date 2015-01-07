@@ -1,0 +1,21 @@
+{
+  "name": "grunt-rick",
+  "version": "0.0.1",
+  "description": "a grunt plugin enabling Rick, the build enforcer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikeholm/grunt-rick"
+  },
+  "author": "mikeholm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikeholm/grunt-rick/issues"
+  },
+  "homepage": "https://github.com/mikeholm/grunt-rick",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  },
+  "dependencies": {
+    "rick-cli": "file:/Users/mholm/projects/rick"
+  }
+}
