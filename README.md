@@ -51,3 +51,5 @@ Or attach the `rick` task to another one of the tasks in your Gruntfile.
 ```js
 grunt.registerTask('default', ['jshint', 'rick']);
 ```
+
+You can also copy and modify the example pre-push git-hook to run Rick whenever you push in your project.
