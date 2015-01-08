@@ -9,15 +9,19 @@
 remote="$1"
 url="$2"
 
+JENKINS_BRANCH='refs/heads/master'
+JENKINS_REPO='*github.com:yourAwesomeRepo.git'
+GRUNTCMD='grunt --gruntfile Gruntfile.js'
+
 IFS=' '
 while read local_ref local_sha remote_ref remote_sha
 do
     # only protect the branch Jenkins monitors
     # don't care about forked repos
     # only if grunt-rick is installed
-    if [[ $remote_ref == "refs/heads/master" && \
-          $url == *github.com:yourAwesomeRepo.git && \
-          $(grunt --help | grep rick &> /dev/null && echo found) == "found" ]]
+    if [[ $remote_ref == ${JENKINS_BRANCH} ]] && \
+       [[ $url == ${JENKINS_REPO} ]] && \
+       ${GRUNTCMD} --help | grep rick &> /dev/null
     then
         echo "I see you're attempting to push to master. I'll check Jenkins for you."
         grunt rick && rc=$?
