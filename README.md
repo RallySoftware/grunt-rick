@@ -52,4 +52,21 @@ Or attach the `rick` task to another one of the tasks in your Gruntfile.
 grunt.registerTask('default', ['jshint', 'rick']);
 ```
 
-You can also copy and modify the example pre-push git-hook to run Rick whenever you push in your project.
+Once installed, `grunt rickMe` can generate a pre-push git-hook for you and put it in your project's '.git/hooks' directory. It will prompt you for the variables it needs to create a hook specifically for your project.
+
+```bash
+$ grunt rickMe
+Running "rickMe" task
+---------------------
+Hi, I'm Rick.
+I can help you protect the Jenkins build by dropping a pre-push git-hook in your repo.
+That way, I'll be able to warn you if you are pushing to a broken build.
+
+prompt: Branch Jenkins is monitoring:  (master)
+prompt: Repo Jenkins is monitoring:  (git@github.com:yourAwesomeRepo.git)
+prompt: Gruntfile:  (/Users/you/projects/thingy/Gruntfile.coffee)
+```
+
+Rick will take your answers and display your custom git-hook so that you can check it for errors. He will also tell you where he placed the hook.
+
+If you made a mistake in the config, you can re-run `grunt rickMe` to overwrite the old hook, edit the file by hand, or simply delete it.

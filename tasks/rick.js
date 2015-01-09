@@ -14,4 +14,11 @@ module.exports = function(grunt) {
       rick(url, job, this.async());
     }
   );
+  grunt.registerTask(
+    'rickMe',
+    'Generate a pre-push git-hook',
+    function() {
+      rick('me', 'grunt', this.async());
+    }
+  );
 };
