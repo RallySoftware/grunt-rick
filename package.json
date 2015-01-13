@@ -1,6 +1,6 @@
 {
   "name": "grunt-rick",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a grunt plugin enabling Rick, the build enforcer",
   "repository": {
     "type": "git",
