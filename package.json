@@ -13,11 +13,10 @@
   },
   "homepage": "https://github.com/RallySoftware/grunt-rick",
   "dependencies": {
-    "rick-cli": "file:/Users/mholm/projects/rick"
+    "rick-cli": "0.0.4"
   },
   "devDependencies": {
-    "jshint": "^2.5.11",
-    "rick-cli": "file:../rick"
+    "jshint": "^2.5.11"
   },
   "scripts": {
     "test": "jshint tasks"
