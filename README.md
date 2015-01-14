@@ -1,6 +1,6 @@
 grunt-rick 
 ==========
-[![NPM](https://nodei.co/npm/grunt-rick.png)](https://nodei.co/npm/grunt-rick/)
+[![NPM](https://nodei.co/npm/grunt-rick.png)](https://nodei.co/npm/grunt-rick/) [![Stories in Ready](https://badge.waffle.io/RallySoftware/grunt-rick.png?label=ready&title=Ready)](https://waffle.io/RallySoftware/grunt-rick)
 
 a grunt plugin enabling [Rick](https://github.com/RallySoftware/rick), the build enforcer
 
