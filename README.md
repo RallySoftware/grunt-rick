@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/RallySoftware/grunt-rick.png?label=ready&title=Ready)](https://waffle.io/RallySoftware/grunt-rick)
 grunt-rick 
 ==========
 [![NPM](https://nodei.co/npm/grunt-rick.png)](https://nodei.co/npm/grunt-rick/)
