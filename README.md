@@ -1,4 +1,4 @@
-grunt-rick
+grunt-rick [![npm version](https://badge.fury.io/js/grunt-rick.svg)](http://badge.fury.io/js/grunt-rick)
 ==========
 
 a grunt plugin enabling [Rick](https://github.com/RallySoftware/rick), the build enforcer
